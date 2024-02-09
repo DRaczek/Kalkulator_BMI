@@ -22,6 +22,7 @@
         <Button Text="Oblicz" Clicked="Button_Clicked"></Button>
         <Label x:Name="BmiLabel"></Label>
         <Label x:Name="ResultLabel"></Label>
+        <Button Text="Zapisz" IsVisible="false" x:Name="saveButton" Clicked="saveButton_Clicked"></Button>
     </StackLayout>
 
 </ContentPage>
