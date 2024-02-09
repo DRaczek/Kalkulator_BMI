@@ -6,8 +6,8 @@
     <StackLayout Padding="50,20" HorizontalOptions="Center" VerticalOptions="Center">
         <Label Text="Płeć"></Label>
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-            <RadioButton Content="Mężczyzna" GroupName="sex"/>
-            <RadioButton Content="Kobieta"  GroupName="sex"/>
+            <RadioButton Content="Mężczyzna" GroupName="sex" x:Name="maleRadio"/>
+            <RadioButton Content="Kobieta"  GroupName="sex" x:Name="femaleRadio"/>
         </StackLayout>
         <Label Text="Wysokość"></Label>
         <Grid ColumnDefinitions="*, Auto">
@@ -19,6 +19,9 @@
             <Entry x:Name="weightEntry" HorizontalOptions="FillAndExpand"/>
             <Label Text="kg" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
         </Grid>
+        <Button Text="Oblicz" Clicked="Button_Clicked"></Button>
+        <Label x:Name="BmiLabel"></Label>
+        <Label x:Name="ResultLabel"></Label>
     </StackLayout>
 
 </ContentPage>
