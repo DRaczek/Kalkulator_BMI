@@ -71,5 +71,10 @@ namespace Kalkulator_BMI
             await DisplayAlert("Sukces", "Udało się zapisać plik", "OK");
 
         }
+
+        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Results());
+        }
     }
 }

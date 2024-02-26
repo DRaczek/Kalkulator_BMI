@@ -1,7 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Kalkulator_BMI.MainPage">
+             x:Class="Kalkulator_BMI.MainPage"
+             >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Zapisane wyniki" Clicked="ToolbarItem_Clicked">
+            
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
 
     <StackLayout Padding="50,20" HorizontalOptions="Center" VerticalOptions="Center">
         <Label Text="Płeć"></Label>
