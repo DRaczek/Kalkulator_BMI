@@ -39,7 +39,7 @@ namespace Kalkulator_BMI
                             Title =Path.GetFileName(file),
                             Date = File.GetCreationTime(file)
                         }    
-                        );
+                    );
             }
             lstView.ItemsSource = list;
         }

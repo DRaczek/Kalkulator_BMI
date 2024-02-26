@@ -25,6 +25,7 @@
                             <Label Text="{Binding Bmi.Sex}"/>
                             <Label Text="Rezultat:"/>
                             <Label Text="{Binding Bmi.Score}"/>
+                            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="5" Color="Black"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
