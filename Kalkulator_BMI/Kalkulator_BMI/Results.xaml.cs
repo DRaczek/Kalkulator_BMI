@@ -14,6 +14,7 @@ namespace Kalkulator_BMI
     public class ListViewItem
     {
         public string Title { get; set; }
+        public string FullName { get; set; }
         public DateTime Date { get; set; }
         public BMI Bmi { get; set; }
     }
@@ -37,11 +38,19 @@ namespace Kalkulator_BMI
                         {
                             Bmi = JsonConvert.DeserializeObject<BMI>(File.ReadAllText(file)),
                             Title =Path.GetFileName(file),
-                            Date = File.GetCreationTime(file)
+                            Date = File.GetCreationTime(file),
+                            FullName = file,
                         }    
                     );
             }
             lstView.ItemsSource = list;
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            ListViewItem lvi = (sender as Button).BindingContext as ListViewItem;
+            File.Delete(lvi.FullName);
+            OnAppearing();
         }
     }
 }

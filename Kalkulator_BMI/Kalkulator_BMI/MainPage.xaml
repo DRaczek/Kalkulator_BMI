@@ -4,31 +4,29 @@
              x:Class="Kalkulator_BMI.MainPage"
              >
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Zapisane wyniki" Clicked="ToolbarItem_Clicked">
-            
-        </ToolbarItem>
+        <ToolbarItem Text="Zapisane wyniki" Clicked="ToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>
 
     <StackLayout Padding="50,20" HorizontalOptions="Center" VerticalOptions="Center">
-        <Label Text="Płeć"></Label>
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+        <Label Text="Płeć"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,0,0,50">
             <RadioButton Content="Mężczyzna" GroupName="sex" x:Name="maleRadio"/>
             <RadioButton Content="Kobieta"  GroupName="sex" x:Name="femaleRadio"/>
         </StackLayout>
-        <Label Text="Wysokość"></Label>
+        <Label Text="Wysokość"/>
         <Grid ColumnDefinitions="*, Auto">
-            <Entry x:Name="heightEntry"/>
+            <Entry x:Name="heightEntry" Margin="10,0"/>
             <Label Text="cm" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
         </Grid>
-        <Label Text="Waga"></Label>
-        <Grid  ColumnDefinitions="*, Auto">
-            <Entry x:Name="weightEntry" HorizontalOptions="FillAndExpand"/>
+        <Label Text="Waga"/>
+        <Grid  ColumnDefinitions="*, Auto"  Margin="0,0,0,30">
+            <Entry x:Name="weightEntry" HorizontalOptions="FillAndExpand"  Margin="10,0"/>
             <Label Text="kg" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
         </Grid>
-        <Button Text="Oblicz" Clicked="Button_Clicked"></Button>
-        <Label x:Name="BmiLabel"></Label>
-        <Label x:Name="ResultLabel"></Label>
-        <Button Text="Zapisz" IsVisible="false" x:Name="saveButton" Clicked="saveButton_Clicked"></Button>
+        <Button Text="Oblicz" Clicked="Button_Clicked"/>
+        <Label x:Name="BmiLabel" FontAttributes="Bold"/>
+        <Label x:Name="ResultLabel" FontAttributes="Bold"/>
+        <Button Text="Zapisz" IsVisible="false" x:Name="saveButton" Clicked="saveButton_Clicked"/>
     </StackLayout>
 
 </ContentPage>
