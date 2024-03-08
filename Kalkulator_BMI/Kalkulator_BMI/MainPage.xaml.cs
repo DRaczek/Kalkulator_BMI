@@ -61,15 +61,13 @@ namespace Kalkulator_BMI
             };
             try
             {
-                File.WriteAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), title), JsonConvert.SerializeObject(nowe));
+                File.WriteAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), title), nowe.ToString());
             }
             catch (Exception)
             {
                 await DisplayAlert("Błąd", "Nie udało się zapisać pliku", "OK");
             }
-
             await DisplayAlert("Sukces", "Udało się zapisać plik", "OK");
-
         }
 
         private void ToolbarItem_Clicked(object sender, EventArgs e)

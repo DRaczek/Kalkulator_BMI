@@ -36,7 +36,7 @@ namespace Kalkulator_BMI
                 list.Add(
                         new ListViewItem()
                         {
-                            Bmi = JsonConvert.DeserializeObject<BMI>(File.ReadAllText(file)),
+                            Bmi = BMI.fromString(File.ReadAllText(file)),
                             Title =Path.GetFileName(file),
                             Date = File.GetCreationTime(file),
                             FullName = file,
